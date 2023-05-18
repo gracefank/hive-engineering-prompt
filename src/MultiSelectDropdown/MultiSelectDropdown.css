@@ -1,0 +1,128 @@
+body {
+  font-family: "Nunito", sans-serif;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+.multiselect-dropdown {
+  position: relative;
+  display: inline-block;
+  width: 250px;
+}
+
+.multiselect-dropdown .dropdown-label,
+.multiselect-dropdown .dropdown-header .dropdown-label {
+  display: inline-block;
+  margin-bottom: 8px;
+}
+
+.dropdown-header {
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: #fff;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+}
+
+.dropdown-header:hover {
+  background-color: #f3f9ff;
+}
+
+.dropdown-header:focus,
+.dropdown-header:active,
+.dropdown-header.active {
+  border: 1px solid #4376DD;
+}
+
+.dropdown-header::after {
+  content: "";
+  border: solid #999;
+  border-width: 0 2px 2px 0;
+  display: inline-block;
+  padding: 3px;
+  transform: rotate(45deg);
+  margin-left: auto;
+  transition: transform 0.2s ease-in-out;
+}
+
+.dropdown-menu {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  max-height: 200px;
+  overflow-y: auto;
+  margin-top: 4px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+  padding: 8px 0;
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  padding: 0 8px;
+}
+
+.option:hover {
+  background-color: #f3f9ff;
+}
+
+.option label {
+  display: block;
+  width: 100%;
+  align-items: center;
+  cursor: pointer;
+  padding: 12px 8px;
+}
+
+.option input[type="checkbox"],
+.option input[type="radio"] {
+  vertical-align: middle;
+}
+
+.option input[type="radio"] {
+  display: none;
+}
+
+.dropdown-buttons {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 4px;
+}
+
+.dropdown-buttons button {
+  background: none;
+  border: none;
+  color: #007bff;
+  cursor: pointer;
+}
+
+.dropdown-buttons button:hover {
+  color: #0562c6;
+}
+
+.dropdown-buttons button:first-child {
+  margin-left: 0;
+}
+
+.selected-options {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.dropdown-arrow-container {
+  display: inline-block;
+  transform: rotate(0);
+  transition: transform 0.3s;
+}
+
+.rotate {
+  transform: rotate(180deg);
+}
