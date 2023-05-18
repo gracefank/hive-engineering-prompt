@@ -18,6 +18,7 @@ Both selecting options are rendered in the `App` in this project.
 - Mobile view
 - Smoother animations
 - Better design
+- Search for larger options list
 
 ## Getting Started
 
