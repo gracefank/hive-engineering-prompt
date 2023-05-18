@@ -7,7 +7,6 @@ test("renders mutliselect example", () => {
   expect(selectTitle).toBeInTheDocument();
 });
 
-
 test("renders single select example", () => {
   render(<App />);
   const selectTitle = screen.getByText(/Single-Select Example/i);

@@ -36,7 +36,7 @@ body {
 .dropdown-header:focus,
 .dropdown-header:active,
 .dropdown-header.active {
-  border: 1px solid #4376DD;
+  border: 1px solid #4376dd;
 }
 
 .dropdown-header::after {

@@ -5,14 +5,22 @@ The MultiSelectDropdown component is a reusable React component that provides a 
 Both selecting options are rendered in the `App` in this project.
 
 ## Features
+
 - Supports both single select and multi-select modes.
-- Provides a customizable placeholder for the dropdown header.
+- Provides a customizable placeholder and title for the dropdown header.
 - Displays the selected options in the dropdown header.
 - Allows selecting/deselecting all options in the multi-select mode.
-- Provides an intuitive user interface with checkboxes and labels.
-- Supports custom styling and customization of various elements.
+- Browsers compatible guaranteed: Chrome, Firefox, Safari
+
+## Possible Extensions
+
+- Add sections or groups in multiselect
+- Mobile view
+- Smoother animations
+- Better design
 
 ## Getting Started
+
 ### `npm i`
 
 Install dependencies

@@ -9,21 +9,7 @@ const MultiSelectDropdown = ({
   placeholder = "Select option(s)",
 }) => {
   const [isOpen, setIsOpen] = useState(false);
-  const [selectedOptions, setSelectedOptions] = useState(
-    multiSelect ? [] : ["None"]
-  );
-
-  useEffect(() => {
-    if (!multiSelect) {
-      setSelectedOptions(selectedOptions.slice(0, 1));
-    }
-  }, [multiSelect]);
-
-  useEffect(() => {
-    setSelectedOptions(
-      options.filter((option) => selectedOptions.includes(option))
-    );
-  }, [options]);
+  const [selectedOptions, setSelectedOptions] = useState([]);
 
   const dropdownRef = useRef(null);
 
@@ -53,6 +39,7 @@ const MultiSelectDropdown = ({
     setIsOpen((prevIsOpen) => !prevIsOpen);
   };
 
+  // handle unfocus dropdown
   const handleOutsideClick = (event) => {
     if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
       setIsOpen(false);
@@ -67,6 +54,7 @@ const MultiSelectDropdown = ({
     };
   }, []);
 
+  // toggles select/deselect all button
   const handleToggleAll = () => {
     if (selectedOptions.length === options.length) {
       setSelectedOptions([]);
@@ -81,7 +69,6 @@ const MultiSelectDropdown = ({
     <div
       className={`multiselect-dropdown ${isOpen ? "active" : ""}`}
       ref={dropdownRef}
-      data-testid="multiselect-dropdown"
     >
       <label className="dropdown-label">{label || "Options"}</label>
       <button
@@ -101,6 +88,7 @@ const MultiSelectDropdown = ({
         <div className={`dropdown-arrow${isOpen ? " rotate" : ""}`}></div>
       </button>
 
+      {/* dropdown component */}
       {isOpen && (
         <div className="dropdown-menu">
           {multiSelect && (

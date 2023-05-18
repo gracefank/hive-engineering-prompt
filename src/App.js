@@ -17,7 +17,15 @@ const App = () => {
     <div>
       <h2>Multi-Select Example</h2>
       <MultiSelectDropdown
-        options={["Oliver Hansen", "Van Henry", "April Tucker", "Ralph Hubbard"]}
+        options={[
+          "Oliver Hansen",
+          "Van Henry",
+          "April Tucker",
+          "Ralph Hubbard",
+          "Beyonce",
+          "Jay-Z",
+          "Jeannette McCurdy",
+        ]}
         selectedOptions={selectedOptions}
         onChange={handleMultiSelectChange}
         label={"Tag"}
